@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+
+    <!-- Truyền biến logger vào lại slement -->
+    <button id="btn" onclick="logger()">click</button>
+
+    <script>
+      const input = document.querySelector("#input");
+      const btn = document.querySelector("#btn");
+
+      const logger = function () {
+        console.log(input.value);
+      };
+      //btn.addEventListener("click", logger);
+
+      //thêm sự kiện sau đó lắng nghe sự kiện ( tên sự kiện, function )
+      //khai báo hàm function vào hàm logger rồi truyền vào phương thức addEvenListener logger
+      //   btn.addEventListener("click", function () {
+      //     console.log(input.value);
+      //   });
+
+      //Xóa lắng nghe sự kiện đi thì ta sẽ làm như sau
+      //btn.removeEventListener("click", logger);
+    </script>
+  </body>
+</html>
